@@ -1,0 +1,14 @@
+machine:
+  node:
+    version: 8
+
+dependencies:
+  override:
+    - npm install
+    - npm install $CYPRESS_NPM_PACKAGE_NAME
+  cache_directories:
+    - node_modules
+
+test:
+  override:
+    - $(npm bin)/cypress run --group --group-id $CIRCLE_BUILD_NUM
