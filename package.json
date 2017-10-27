@@ -1,7 +1,7 @@
 {
   "name": "cypress-example-group",
   "version": "1.0.0",
-  "description": "",
+  "description": "Example grouping test instances by id",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
