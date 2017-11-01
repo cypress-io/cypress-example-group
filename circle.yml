@@ -12,9 +12,9 @@ dependencies:
 test:
   override:
     # record against staging environment
-    - CYPRESS_ENV=staging CYPRESS_PROJECT_ID=$STAGING_PROJECT_ID CYPRESS_RECORD_KEY=$STAGING_RECORD_KEY npm run cy:run --record --group --group-id $CIRCLE_BUILD_NUM
+    - CYPRESS_ENV=staging CYPRESS_PROJECT_ID=$STAGING_PROJECT_ID CYPRESS_RECORD_KEY=$STAGING_RECORD_KEY npm run cy:run -- --record --group --group-id $CIRCLE_BUILD_NUM
     # record against staging environment with same id but use different browser
     # disable video recording because cannot record non-Electron browser
-    - CYPRESS_ENV=staging CYPRESS_PROJECT_ID=$STAGING_PROJECT_ID CYPRESS_RECORD_KEY=$STAGING_RECORD_KEY npm run cy:run --record --group --group-id $CIRCLE_BUILD_NUM --browser chrome --config videoRecording=false
+    - CYPRESS_ENV=staging CYPRESS_PROJECT_ID=$STAGING_PROJECT_ID CYPRESS_RECORD_KEY=$STAGING_RECORD_KEY npm run cy:run -- --record --group --group-id $CIRCLE_BUILD_NUM --browser chrome --config videoRecording=false
     # record against production environment
     # - $(npm bin)/cypress run --group --group-id $CIRCLE_BUILD_NUM
