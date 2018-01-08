@@ -1,3 +1,4 @@
+# CircleCI v1
 machine:
   node:
     version: 8
@@ -9,6 +10,11 @@ dependencies:
   cache_directories:
     - node_modules
 
+# you can control the number of CI workers executing these commands
+# using parallelism setting
+# https://circleci.com/gh/cypress-io/cypress-example-group/edit#parallel-builds
+# all CI workers will execute the same tasks, duplicating the work
+# but their results should all go under the same run record on dashboard
 test:
   override:
     # record against staging environment
