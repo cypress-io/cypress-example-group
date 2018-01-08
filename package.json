@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/cypress-io/cypress-example-group#readme",
   "devDependencies": {
-    "cypress": "1.1.4"
+    "cypress": "1.4.1"
   }
 }
